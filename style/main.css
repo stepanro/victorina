@@ -1,0 +1,50 @@
+button {
+    margin: auto;
+    display: block;
+    width: 400px;
+    height: 200px;
+}
+
+button.btn {
+    border-radius: 0.5em;
+    border-color: black;
+    font-size: 30pt;
+    background-color: rgb(139, 83, 212);
+    color: white;
+    transition: transform 0.15s;
+    transform-style: preserve-3d;
+}
+
+button.btn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #7f72cc;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #000000, 0 0.625em 0 0px #6e688f;
+    transform: translate3d(0, 0.5em, -2em);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button.btn:hover {
+    background: rgb(139, 83, 212);
+    transform: translate(0, 0.25em);
+  }
+  button.btn:hover::before {
+    box-shadow: 0 0 0 2px #000000, 0 0.5em 0 0 #6e688f;
+    transform: translate3d(0, 0.4em, -1em);
+  }
+
+  button.btn:active {
+    background: rgb(139, 83, 212);
+    transform: translate(0em, 0.75em);
+  }
+  button.btn:active::before {
+    box-shadow: 0 0 0 2px #000000, 0 0 #6e688f;
+    transform: translate3d(0, 0, -1em);
+  }
