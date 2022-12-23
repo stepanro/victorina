@@ -26,25 +26,27 @@ button.btn::before {
     bottom: 0;
     background: #7f72cc;
     border-radius: inherit;
-    box-shadow: 0 0 0 2px #000000, 0 0.625em 0 0px #6e688f;
-    transform: translate3d(0, 0.5em, -2em);
+    box-shadow: 0 0 0 2px #000000, 0 0.4em 0 0px #6e688f;
+    transform: translate3d(0, 0.4em, -0.1em);
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
 button.btn:hover {
     background: rgb(139, 83, 212);
     transform: translate(0, 0.25em);
-  }
-  button.btn:hover::before {
-    box-shadow: 0 0 0 2px #000000, 0 0.5em 0 0 #6e688f;
-    transform: translate3d(0, 0.4em, -1em);
-  }
+}
 
-  button.btn:active {
+button.btn:hover::before {
+box-shadow: 0 0 0 2px #000000, 0 0.3em 0 0 #6e688f;
+transform: translate3d(0, 0.25em, -1em);
+}
+
+button.btn:active {
     background: rgb(139, 83, 212);
-    transform: translate(0em, 0.75em);
-  }
-  button.btn:active::before {
+    transform: translate(0, 0.75em);
+}
+
+button.btn:active::before {
     box-shadow: 0 0 0 2px #000000, 0 0 #6e688f;
     transform: translate3d(0, 0, -1em);
-  }
+}
