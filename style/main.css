@@ -13,6 +13,7 @@ button.btn {
     color: white;
     transition: transform 0.15s;
     transform-style: preserve-3d;
+    
 }
 
 button.btn::before {
