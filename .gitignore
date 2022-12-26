@@ -1,3 +1,9 @@
 .replit
 replit.nix
 /env
+/__pycache__
+passenger_wsgi.py
+.htaccess
+/stevenhorn/stevenhorn/__pycache__
+/stevenhorn/victorina/__pycache__
+/tmp
