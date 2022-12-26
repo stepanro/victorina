@@ -1,6 +1,7 @@
 .replit
 replit.nix
 /env
+/venv
 /__pycache__
 passenger_wsgi.py
 .htaccess
