@@ -2,18 +2,18 @@ button {
     margin: auto;
     display: block;
     width: 200px;
-    height: 150px;
+    height: 200px;
 }
 
 button.btn {
-    border-radius: 0.5em;
+    border-radius: 2.5em;
     border-color: black;
     font-size: 30pt;
-    background-color: rgb(139, 83, 212);
+    background-color: rgb(212, 83, 190);
     color: white;
     transition: transform 0.15s;
     transform-style: preserve-3d;
-    
+
 }
 
 button.btn::before {
@@ -25,15 +25,15 @@ button.btn::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #7f72cc;
+    background: #cc72c3;
     border-radius: inherit;
-    box-shadow: 0 0 0 2px #000000, 0 0.4em 0 0px #6e688f;
-    transform: translate3d(0, 0.4em, -0.1em);
-    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 0 0 2px #000000, 0 0.4em 0 0px #8f688c;
+    /* transform: translate3d(0, 0.4em, -0.1em);
+    transition: transform 0.15s, box-shadow 0.15s; */
 }
 
 button.btn:hover {
-    background: rgb(139, 83, 212);
+    background: rgb(212, 83, 201);
     transform: translate(0, 0.25em);
 }
 
