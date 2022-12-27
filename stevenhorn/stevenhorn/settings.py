@@ -59,7 +59,9 @@ ROOT_URLCONF = 'stevenhorn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'public_html'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
