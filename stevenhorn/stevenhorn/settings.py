@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-o2f6hv-j+1^7u*wruqzry+cigyk+k!qkj4sutvtk=i38*1!_bc
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'steven64.beget.tech',
-    'www.steven64.beget.tech',
+    '127.0.0.1',
     'stevenhorn.ru',
     ]
 
@@ -59,9 +58,7 @@ ROOT_URLCONF = 'stevenhorn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'public_html'
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
