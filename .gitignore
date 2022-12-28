@@ -8,3 +8,6 @@ passenger_wsgi.py
 /stevenhorn/stevenhorn/__pycache__
 /stevenhorn/victorina/__pycache__
 /tmp
+*.toml
+*.lock
+/stevenhorn/victorina/migrations/__pycache__
