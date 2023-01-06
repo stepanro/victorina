@@ -1,30 +1,108 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: rgb(232 233 238);
+    width: 100%;
+    font-family: system-ui;
+    height: 100%;
+    color: rgb(74 75 90);
+}
+
+div.dindon_box {
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    width: 100%;
+
+}
+
 button.dindon_button {
+    font-size: 6em;
     margin: auto;
+    display: flex;
+    width: 125px;
+    height: 125px;
+    border-radius: 75px;
+    background-color: rgb(232 233 238);
+    box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
+    border: 0;
+    font-family: monospace;
+    color: #595757;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div.progress {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.progress_names {
+    margin: 50px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.progress_balls {
+    margin: 50px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.progress_names p, div.progress_balls p {
+    margin: 10px 10px 10px 10px;
+    box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
+    padding: 7px 17px;
+    border-radius: 18px;
+    font-size: 2vw;
+}
+
+button.dindon_button p {
     display: block;
-    width: 10em;
-    height: 10em;
-    border-radius: 50pt;
-    background-color: rgb(120, 43, 43);
-    box-shadow: 0 0 6px 2px rgb(120, 43, 43), 0 0 7px 7px black;
-    border-color: rgb(120, 43, 43);
+    margin: 0 0 0 8px;
+    font-size: 100px;
 }
 
 button.dindon_button:active {
-    box-shadow: 0 0 2px 1px rgb(120, 43, 43), 0 0 3px 3px black;
+    box-shadow: inset -1px -1px 8px 1px #f9f7f7, inset 1px 1px 8px 1px #666060;
+    /* background: radial-gradient(closest-side, #f9f7f7, #666060); */
 }
 
 div.question {
-    display: inline-block;
-    margin: auto;
-    width: 100em;
+    display: block;
+    border: 0px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 60px 20px 60px 20px;
+    box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
+    padding: 5px 10px 5px 10px;
+}
+
+div.question p {
+    font-size: 5vw;
 }
 
 div.answer {
-    display: inline-block;
-    margin: auto;
-    width: 100em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
-button.answer_button {
-    display: flexbox;
+div.answer p {
+    border-radius: 10px;
+    background-color: rgb(232 233 238);
+    box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
+    border: 0;
+    display: block;
+    font-size: 2vw;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    margin: 8px;
 }

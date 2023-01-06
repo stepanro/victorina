@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import *
+from .views import VictorinaView
 
 urlpatterns = [
-    path('button/', button),
-    path('test/', button),
+    path('button/', VictorinaView.as_view(), name='button'),
 ]

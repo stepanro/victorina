@@ -7,30 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{% static 'victorina/style/main.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); </style>
     <title>Викторина 2023!</title>
 </head>
 <body>
     <div class="question">
-        <h2>
-            Вопрос викторины отображается сдесь.
-        </h2>
+        <p>
+            {{api_requests_question}}
+        </p>
     </div>
     <div class="answer">
-        <button class="answer_button">
-            1) Ответ 1
-        </button>
-        <button class="answer_button">
-            2) Ответ 2
-        </button>
-        <button class="answer_button">
-            3) Ответ 3
-        </button>
-        <button class="answer_button">
-            4) Ответ 4
-        </button>
+        {% for a in api_requests_answer %}
+        <p>{{a}}</p>
+        {% endfor %}
     </div>
-    <div>
-        <button class="dindon_button"></button>
+    <div class="progress">
+        <div class="progress_names">
+            <p class="balls">Галина</p>
+            <p class="balls">Иван</p>
+            <p class="balls">Петр</p>
+        </div>
+        <div class="progress_balls">
+            <p class="balls">10 очков</p>
+            <p class="balls">20 очков</p>
+            <p class="balls">40 очков</p>
+        </div>
     </div>
+    <!-- <form action="{% url 'button' %}" method="post">
+        {% csrf_token %}
+        <label name="step">Сложность: </label>
+        <input id="step" type="text" name="step" value="{{ current_step }}">
+        <label name="count">Количество: </label>
+        <input id="count" type="text" name="count" value="{{ current_count }}">
+        <input type="submit" value="OK">
+    </form> -->
+    <form action="{% url 'button' %}" method="">
+        {% csrf_token %}
+        <div class="dindon_box">
+            <button class="dindon_button" type="submit" name="dindon">
+                <p>></p>
+            </button>
+        </div>
+    </form>
 </body>
 </html>
