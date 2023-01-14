@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="">Игра в компании</label><input type="checkbox" name="game_in_company" id="game_in_company">
+        <label for="">Игра онлайн</label><input type="checkbox" name="game_in_online" id="game_in_online">
+        <label for="">Введите свое имя: </label><input type="text" name="name">
+        <button type="submit">Дальше</button>
+    </form>
+</body>
+</html>

@@ -12,6 +12,9 @@
     <title>Викторина 2023!</title>
 </head>
 <body>
+    <button >
+        Выйти
+    </button>
     <div class="question">
         <p>
             {{api_requests_question}}
@@ -19,9 +22,12 @@
     </div>
     <div class="answer">
         {% for a in api_requests_answer %}
-        <p>{{a}}</p>
+            <p class="{% cycle 'left' 'right' %}">
+                {{a}}
+            </p>
         {% endfor %}
     </div>
+    <audio src="{% static 'victorina/audio/out.mp3' %}">Аудио не воспроизводится!</audio>
     <div class="progress">
         <div class="progress_names">
             <p class="balls">Галина</p>
@@ -34,19 +40,14 @@
             <p class="balls">40 очков</p>
         </div>
     </div>
-    <!-- <form action="{% url 'button' %}" method="post">
-        {% csrf_token %}
-        <label name="step">Сложность: </label>
-        <input id="step" type="text" name="step" value="{{ current_step }}">
-        <label name="count">Количество: </label>
-        <input id="count" type="text" name="count" value="{{ current_count }}">
-        <input type="submit" value="OK">
-    </form> -->
     <form action="{% url 'button' %}" method="">
         {% csrf_token %}
         <div class="dindon_box">
             <button class="dindon_button" type="submit" name="dindon">
-                <p>></p>
+                <div class='arrow'>
+                    <div class="arrow_top"></div>
+                    <div class="arrow_bottom"></div>
+                </div>
             </button>
         </div>
     </form>

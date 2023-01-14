@@ -20,9 +20,9 @@ button.dindon_button {
     font-size: 6em;
     margin: auto;
     display: flex;
-    width: 125px;
-    height: 125px;
-    border-radius: 75px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
     background-color: rgb(232 233 238);
     box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
     border: 0;
@@ -36,7 +36,7 @@ button.dindon_button {
 
 div.progress {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 div.progress_names {
@@ -58,18 +58,19 @@ div.progress_names p, div.progress_balls p {
     box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
     padding: 7px 17px;
     border-radius: 18px;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 button.dindon_button p {
     display: block;
-    margin: 0 0 0 8px;
-    font-size: 100px;
+    margin: 0 0 0 41px;
+    font-size: 60px;
 }
 
 button.dindon_button:active {
     box-shadow: inset -1px -1px 8px 1px #f9f7f7, inset 1px 1px 8px 1px #666060;
-    /* background: radial-gradient(closest-side, #f9f7f7, #666060); */
+    transform: rotate(270deg);
+    transition: 1s;
 }
 
 div.question {
@@ -88,21 +89,47 @@ div.question p {
 
 div.answer {
     display: flex;
-    width: 100%;
+    margin: 8vw;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
 }
 
-div.answer p {
+.left, .right {
     border-radius: 10px;
     background-color: rgb(232 233 238);
     box-shadow: -4px -4px 8px 0px rgb(247 248 253), 4px 4px 8px 0px rgb(190 202 212);
     border: 0;
     display: block;
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 10px;
     min-width: 100px;
     text-align: center;
     margin: 8px;
+}
+
+.arrow {
+    cursor: pointer;
+    position: relative;
+    margin: 20px;
+}
+
+.arrow_top {
+    width: 4px;
+    height: 40px;
+    background-color: #595757;
+    transform: rotate(-45deg);
+    transform-origin: bottom right;
+    margin-left: 35px;
+    border-radius: 4px;
+}
+
+.arrow_bottom {
+    width: 4px;
+    height: 40px;
+    background-color: #595757;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    margin-left: 35px;
+    border-radius: 4px;
 }

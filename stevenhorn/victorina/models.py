@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Person(models.Model):
+    name = models.CharField(max_length=30)
+    game_in_company = models.BooleanField(default=False)
+    game_in_online = models.BooleanField(default=False)

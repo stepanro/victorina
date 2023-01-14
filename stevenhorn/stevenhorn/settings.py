@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'stevenhorn.ru',
-    '192.168.31.183',
+    '192.168.31.140',
     ]
 
 
@@ -53,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'stevenhorn.middlewares.VictorinaMiddleware',
 ]
 
 ROOT_URLCONF = 'stevenhorn.urls'
