@@ -31,7 +31,7 @@ def api_requests(step, count):
 
     # return responce['data'][0]['question'], responce['data'][0]['answers']
 
-    with open(file='victorina/responce.json', mode='r', encoding='utf-8') as read_responce:
+    with open(file='stevenhorn/victorina/responce.json', mode='r', encoding='utf-8') as read_responce:
         responce = json.load(read_responce)
         return responce['data'][0]['question'], responce['data'][0]['answers']
 
@@ -43,8 +43,8 @@ def api_requests(step, count):
 class LoginCreateView(CreateView):
     model = Person
     template_name = "victorina/login.html"
-    success_url = reverse_lazy('button')
-    login_url = reverse_lazy('button')
+    success_url = reverse_lazy('index')
+    login_url = reverse_lazy('index')
     fields = '__all__'
 
 
