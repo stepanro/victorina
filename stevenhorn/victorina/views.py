@@ -26,18 +26,16 @@ def api_requests(step, count):
 
 #     print(responce)
 
-    # with open(file='responce.json', mode='w', encoding='utf-8') as write_responce:
+    # with open(file='result.json', mode='w', encoding='utf-8') as write_responce:
     #     json.dump(responce, write_responce, indent=4, ensure_ascii=False)
 
     # return responce['data'][0]['question'], responce['data'][0]['answers']
 
-    with open(file='stevenhorn/victorina/responce.json', mode='r', encoding='utf-8') as read_responce:
+    with open(file='victorina/result.json', mode='r', encoding='utf-8') as read_responce:
         responce = json.load(read_responce)
         return responce['data'][0]['question'], responce['data'][0]['answers']
 
-        # print(responce['data'][0]['question'])
-        # print(responce['data'][0]['answers'])
-        # print(responce['amount'])
+
 
 
 class LoginCreateView(CreateView):
@@ -70,10 +68,12 @@ def victorina(request):
     context = dict()
     model = Person
     responce = api_requests(step=1, count=1)
-    api_requests_question = responce[0]
-    api_requests_answer = responce[1]
+    if responce:
 
-    context['api_requests_question'] = api_requests_question
-    context['api_requests_answer'] = api_requests_answer
+        api_requests_question = responce[0]
+        api_requests_answer = responce[1]
 
-    return render(request=request, template_name='victorina/index.html', context=context)
+        context['api_requests_question'] = api_requests_question
+        context['api_requests_answer'] = api_requests_answer
+
+        return render(request=request, template_name='victorina/index.html', context=context)
